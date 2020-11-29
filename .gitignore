@@ -1,5 +1,1 @@
-# deps
-node_modules
-
-# enviroment
-# .env
+**/node_modules
