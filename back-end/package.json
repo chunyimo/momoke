@@ -29,8 +29,10 @@
   "dependencies": {
     "@prisma/client": "^2.12.1",
     "@types/node": "^14.14.10",
+    "docker-compose": "^0.23.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "global": "^4.4.0",
     "nodemon": "^2.0.6",
     "supervisor": "^0.12.0"
   }
