@@ -11,7 +11,9 @@ services:
     networks:
       - momock_network
     volumes:
+      # mount 的方式，可以通过git进行同步，适合团队使用
       - ./db_data:/var/lib/postgresql/data
+      # volume 的方式可以避免git污染,适合个人使用
       # - db-data:/var/lib/postgresql/data
   pgadmin4:
     image: dpage/pgadmin4:latest
