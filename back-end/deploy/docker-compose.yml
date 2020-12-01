@@ -2,6 +2,7 @@ version: '3.8'
 services:
   db:
     image: postgres:13.1
+    container_name: postgresql13
     environment:
       POSTGRES_USER: momock
       POSTGRES_PASSWORD: momock
@@ -10,10 +11,11 @@ services:
     networks:
       - momock_network
     volumes:
-      - db-data:/var/lib/postgresql/data
-
+      - ./db_data:/var/lib/postgresql/data
+      # - db-data:/var/lib/postgresql/data
   pgadmin4:
     image: dpage/pgadmin4:latest
+    container_name: pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@momock.com
       PGADMIN_DEFAULT_PASSWORD: admin
@@ -21,10 +23,12 @@ services:
       - '8889:80'
     networks:
       - momock_network
+    links:
+      - 'db:db'
 
 networks:
   momock_network:
     driver: bridge
-
+# 创建一个本地卷 用于持续化数据
 volumes:
   db-data:

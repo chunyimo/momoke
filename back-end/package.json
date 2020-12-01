@@ -4,7 +4,8 @@
   "description": "A complete easy mock platform for individual front-end project.",
   "main": "index.js",
   "scripts": {
-    "start": "supervisor -w src node ./src/index.ts"
+    "start": "supervisor -w src node ./src/index.ts",
+    "dcup": "docker-compose -f ./deploy/docker-compose.yml up"
   },
   "repository": {
     "type": "git",
