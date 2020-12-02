@@ -1,4 +1,3 @@
-const dotenv = require('dotenv');
-const path = require('path');
+import dotenv from 'dotenv';
 dotenv.config({path:'../../.env'});
 console.log(process.env.DB_USERNAME);

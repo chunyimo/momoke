@@ -41,3 +41,17 @@ npx prisma generate
 ```shell
 sudo docker exec -it container_id psql -U user_name
 ```
+
+## 编程环境配置
+> typescript eslint
+```
+npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+```
+> .eslintrc.js
+```
+module.exports = {
+  'parser':'@typescript-eslint/parser',
+  'extends': ['standard','plugin:@typescript-eslint/recommended'], //extends这里加上standard规范
+  'env': {'node': true}
+}
+```
